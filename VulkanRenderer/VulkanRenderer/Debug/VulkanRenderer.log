@@ -1,0 +1,10 @@
+﻿VulkanRenderer.obj : error LNK2019: _glfwInit_main 함수에서 참조되는 확인할 수 없는 외부 기호
+VulkanRenderer.obj : error LNK2019: _glfwTerminate_main 함수에서 참조되는 확인할 수 없는 외부 기호
+VulkanRenderer.obj : error LNK2019: _glfwWindowHint_main 함수에서 참조되는 확인할 수 없는 외부 기호
+VulkanRenderer.obj : error LNK2019: _glfwCreateWindow_main 함수에서 참조되는 확인할 수 없는 외부 기호
+VulkanRenderer.obj : error LNK2019: _glfwDestroyWindow_main 함수에서 참조되는 확인할 수 없는 외부 기호
+VulkanRenderer.obj : error LNK2019: _glfwWindowShouldClose_main 함수에서 참조되는 확인할 수 없는 외부 기호
+VulkanRenderer.obj : error LNK2019: _glfwPollEvents_main 함수에서 참조되는 확인할 수 없는 외부 기호
+C:\Users\zzzeh\source\repos\VulkanRenderer\\libs\vulkanLib\vulkan-1.lib : warning LNK4272: 'x64' 라이브러리 컴퓨터 종류가 'x86' 대상 컴퓨터 종류와 충돌합니다.
+C:\Users\zzzeh\source\repos\VulkanRenderer\\libs\glfw3.lib : warning LNK4272: 'x64' 라이브러리 컴퓨터 종류가 'x86' 대상 컴퓨터 종류와 충돌합니다.
+C:\Users\zzzeh\source\repos\VulkanRenderer\Debug\VulkanRenderer.exe : fatal error LNK1120: 7개의 확인할 수 없는 외부 참조입니다.
