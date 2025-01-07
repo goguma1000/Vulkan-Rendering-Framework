@@ -369,6 +369,10 @@ namespace Utils {
 FrameBuffer를 생성할 때 변수를 선언한 후 SetUp함수를 호출하면 된다.</br>
 parameter에서 attachments에 texture할당해주면 shadow map과 같은 texture를 생성할 수 있다.</br>
 
+**관련 코드 링크 :**</br>
+[FrameBuffer.hpp](https://github.com/goguma1000/Vulkan-Rendering-Framework/tree/main/VulkanRenderer/VulkanRenderer/Tools/FrameBuffer.hpp)</br>
+[FrameBuffer.cpp](https://github.com/goguma1000/Vulkan-Rendering-Framework/tree/main/VulkanRenderer/VulkanRenderer/Tools/FrameBuffer.cpp)</br>
+
 ### Draw model
 model을 draw할 때는 custome render function에서 다음과 같이 코드를 작성하면 된다.</br>
 ~~~c++
@@ -385,6 +389,7 @@ void drawFunc(VkCommandBuffer commandBuffer, VkFramebuffer framebuffer, uint32_t
 	plane.Draw(commandBuffer, renderer->GetPipelineLayout(), renderer->texDescriptorSets[currentFrame], renderer->GetDefaultSampler(),modelMat);
 }
 ~~~
+
 ~~~c++
 void Model::Draw(VkCommandBuffer commadbuffer,VkPipelineLayout pipelineLayout ,VkDescriptorSet texDescriptorSet, VkSampler sampler, glm::mat4 modelMat) {
 	Renderer* renderer = Renderer::GetInstance();
@@ -408,6 +413,10 @@ model class의 Draw 함수를 호출하여 draw할 수 있다.</br>
 Model::Draw함수는 우선 load된 texture들로 descriptorset을 update한다.</br>
 그 후, push constant를 사용하여 model matrix를 vertex shader에서 읽을 수 있게 한다.</br>
 마지막으로 model을 이루고 있는 각 mesh의 Draw함수를 호출하여 model을 화면에 그린다.</br>
+
+**관련 코드 링크 :**</br>
+[Model.hpp](https://github.com/goguma1000/Vulkan-Rendering-Framework/tree/main/VulkanRenderer/VulkanRenderer/Model/Model.hpp)</br>
+[Model.cpp](https://github.com/goguma1000/Vulkan-Rendering-Framework/tree/main/VulkanRenderer/VulkanRenderer/Model/Model.cpp)</br>
 
 ### Update-After-Bind descriptor
 ~~~c++
@@ -464,6 +473,9 @@ VkDescriptorBindingFlagsEXT에서 각 EXT_BIT는 다음을 의미한다.</br>
 * VK_DESCRIPTOR_BINDING_UPDATE_AFTER_BIND_BIT_EXT : Descriptor set이 command buffer에 bind되어도 update를 할 수 있도록 한다.
 * VK_DESCRIPTOR_BINDING_UPDATE_UNUSED_WHILE_PENDING_BIT_EXT : command buffer가 실행되고 있는 동안 descriptor를 업데이트 할 수 있도록 해준다.
 
+**관련 코드 링크 :**</br>
+[PipelineBuilder.hpp](https://github.com/goguma1000/Vulkan-Rendering-Framework/blob/main/VulkanRenderer/VulkanRenderer/Tools/PipelineBuilder.hpp)</br>
+[PipelineBuilder.cpp](https://github.com/goguma1000/Vulkan-Rendering-Framework/blob/main/VulkanRenderer/VulkanRenderer/Tools/PipelineBuilder.cpp)</br>
 
 
 
