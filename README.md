@@ -26,7 +26,8 @@ Vulkan API를 이용한 렌더링 프레임워크 개발</br>
 * 처음 1~2프레임에 그림이 그려지지 않음
 
 ## Demo
-![Alt text](https://github.com/goguma1000/Vulkan-Rendering-Framework/tree/main/Readme_source/DemoIMG.PNG)
+![Demo IMG](https://media.githubusercontent.com/media/goguma1000/Vulkan-Rendering-Framework/main/Readme_source/DemoIMG.PNG)
+
 ## Description
 ### main
 main함수는 'VulkanRenderer.cpp'파일에 존재한다.</br>
