@@ -27,9 +27,9 @@ public:
 	glm::mat4 GetModelMat(glm::mat4 modelMat = glm::mat4(1));
 
 	VkImageView GetTextureView(int idx) { return texture_loaded[idx].textureImageView; }
-	std::vector<Texture> texture_loaded;
 private:
 	std::vector<Mesh> meshes;
+	std::vector<Texture> texture_loaded;
 private:
 	void ProcessNode(const Renderer* renderer, aiNode* node, const aiScene* scene, const std::string& path);
 	Mesh ProcessMesh(const Renderer* renderer, aiMesh* mesh, const aiScene* scene, const std::string& path);

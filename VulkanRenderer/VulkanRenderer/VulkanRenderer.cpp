@@ -120,8 +120,8 @@ void drawFunc(VkCommandBuffer commandBuffer, VkFramebuffer framebuffer, uint32_t
 	
 	//Write here
 
-	//bind texture
 	vkCmdBindDescriptorSets(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, renderer->GetPipelineLayout(), 0, 1, &descriptorSet, 0, nullptr);
+	//bind texture
 	vkCmdBindDescriptorSets(commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, renderer->GetPipelineLayout(), 1, 1, &renderer->texDescriptorSets[currentFrame], 0, nullptr);
 	model.SetPosition(pos);
 	model.Draw(commandBuffer, renderer->GetPipelineLayout(), renderer->texDescriptorSets[currentFrame], renderer->GetDefaultSampler());
@@ -129,7 +129,6 @@ void drawFunc(VkCommandBuffer commandBuffer, VkFramebuffer framebuffer, uint32_t
 	model.Draw(commandBuffer, renderer->GetPipelineLayout(), renderer->texDescriptorSets[currentFrame], renderer->GetDefaultSampler());
 	glm::mat4 modelMat = glm::scale(glm::mat4(1.0f), glm::vec3(1.0f)) * glm::rotate(glm::mat4(1), glm::radians(90.0f), glm::vec3(1.0f, 0.0f, 0.0f));
 	plane.Draw(commandBuffer, renderer->GetPipelineLayout(), renderer->texDescriptorSets[currentFrame], renderer->GetDefaultSampler(),modelMat);
-	//shadowMap.Show(commandBuffer, currentFrame, VK_IMAGE_LAYOUT_DEPTH_STENCIL_READ_ONLY_OPTIMAL);
 }
 #pragma endregion
 
